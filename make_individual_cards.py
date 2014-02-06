@@ -1,5 +1,5 @@
-# Please install Pillow (and uninstall PIL if you are using it) and its
-# libraries
+# Please install Pillow and its libraries
+# (and uninstall PIL if you are using it)
 
 # While experimenting with placement, font size, ect, I would ^C out of the
 # program so it wouldn't create all 180 cards I had in my file
@@ -36,15 +36,15 @@ def make_cards(line, background_color, text_color, border_color, icon, name):
     font = ImageFont.truetype("/usr/share/fonts/Helvetica_Bold.ttf", 60)
     footer_font = ImageFont.truetype("/usr/share/fonts/Helvetica_Bold.ttf", 20)
     
-    # This is key to keeping the line height consistent by making the line height
-    # equal to the size of the tallest character that will be produced for 
-    # that font size.  The number added onto the end increases the
+    # This is key to keeping the line height consistent by making the line 
+    # height equal to the size of the tallest character that will be produced
+    # for that font size.  The number added onto the end increases the
     # line spacing and keeps the text from getting too close to each 
     # other between lines.
     line_spacing = draw.textsize('A', font=font)[1] + 30
 
     # "0" starts the text writing at the top of the card, bigger numbers
-    # lower the starting point.
+    # lower the starting coordinate.
     current_height = 100
     
     for line in text:
