@@ -1,0 +1,19 @@
+Hi!
+
+My friends and I like playing Cards Against Humanity (http://cardsagainsthumanity.com/).  We got together one night and wrote down a bunch of ideas for our own cards.  My friend Piper, who got me into Python, challenged me to write a program to generate cards!
+
+I had almost no idea how to do so, but after he introduced me to Pillow and got me started in the right direction, I got going!  About a week or so later, I learned quite a bit about Pillow, and how it interacts with Python.  I didn't know that we were going to use an online printing studio(in this case Printer Studio (http://www.printerstudio.com/personalized/bridge-size-custom-cards-blank-cards.html)) to print them out, so I have a few different card generators that can be used in different ways.
+
+###
+Install Pillow and it's libraries to make these programs work.  Pillow will not run if you have PIL installed.
+###
+
+make_individual_cards:
+    This program assumes the user has saved their lists of black and white cards
+    in the working directory of the script, and labled them "List_whites.txt" and 
+    "List_blacks.txt".  The program starts by prompting the user whether they 
+    would like to make black or white cards.  It then runs through the associated
+    file and generates .png images appropriate to uploading to Printer Studio
+    to create "bridge size" cards.  The logo is sized at 120x120 pixels.
+
+
