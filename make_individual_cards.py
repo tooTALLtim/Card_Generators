@@ -71,7 +71,7 @@ def make_cards(line, background_color, text_color, border_color, icon, name):
     # Paste the icon at the numbered coordinates.
     card.paste(icon, (100, 950))
     # This creates individual cards with a nice date stamp on them.
-    card.save(name + date_string + ".png", timestamp=3, boldfont=1, textpos='bc')
+    card.save(name + "_" + date_string + ".png", timestamp=3, boldfont=1, textpos='bc')
 
 
 # Program starts prompting here.
